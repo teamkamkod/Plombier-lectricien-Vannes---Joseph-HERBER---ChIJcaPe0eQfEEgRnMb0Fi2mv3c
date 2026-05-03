@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plombier & Électricien Vannes - Joseph HERBER — plombier — Vannes</title>
+  <meta name="description" content="Plombier local à Vannes, Joseph HERBER offre des services de réparation et d'installation avec réactivité et professionnalisme." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A6D8F;
+      --secondary: #F5A623;
+      --background: #F8FAFB;
+      --text: #222B32;
+      --cta: #E94F37;
+      --radius: 4px;
+      --section-pad: 40px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26, 109, 143, 0.97);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      padding: 0 20px;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-brand {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--secondary); }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; left: 0; right: 0;
+        background: rgba(26, 109, 143, 0.98);
+        padding: 16px 20px;
+        gap: 14px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0d4a63 0%, #1A6D8F 50%, #1e7fa6 100%);
+      padding-top: 60px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: radial-gradient(circle at 20% 50%, #fff 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, #fff 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 span { color: var(--secondary); }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta {
+      background: var(--cta);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-cta:hover { background: #c93d27; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-icon-box {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 4/3;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .hero-icon-box svg {
+      width: 80px;
+      height: 80px;
+      opacity: 0.7;
+    }
+
+    .hero-icon-box p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-text p { margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .hero-visual { display: none; }
+    }
+
+    /* SECTIONS COMMON */
+    section { padding: var(--section-pad) 20px; }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--secondary);
+      margin: 0 auto 32px;
+      border-radius: 2px;
+    }
+
+    /* FADE-IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .fade-in.visible { opacity: 1; }
+
+    /* SERVICES */
+    #services {
+      background: #fff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--background);
+      border: 1px solid #e2e8ed;
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 24px rgba(26,109,143,0.12);
+      transform: translateY(-3px);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .service-icon svg { width: 26px; height: 26px; fill: #fff; }
+
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .service-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
+
+    /* ZONE INTERVENTION */
+    #zone-intervention {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    #zone-intervention .section-title { color: #fff; }
+    #zone-intervention .section-divider { background: var(--secondary); }
+
+    .zone-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .zone-text p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .zone-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .zone-tag {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .zone-map iframe {
+      width: 100%;
+      height: 280px;
+      border-radius: var(--radius);
+      border: none;
+      filter: grayscale(20%);
+    }
+
+    @media (max-width: 768px) {
+      .zone-content { grid-template-columns: 1fr; }
+    }
+
+    /* AVIS CLIENTS */
+    #avis-clients { background: var(--background); }
+
+    .reviews-intro {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius);
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .stars { color: var(--secondary); font-size: 1.3rem; letter-spacing: 2px; }
+    .rating-num { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text); }
+    .rating-count { font-size: 0.82rem; color: #777; }
+
+    .reviews-note {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      padding: 32px;
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px dashed #ddd;
+    }
+
+    .reviews-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+
+    /* PRESENTATION */
+    #presentation { background: #fff; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .feature-item::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--secondary);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, #1A6D8F, #0d4a63);
+      border-radius: 8px;
+      padding: 40px 32px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .about-visual h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--secondary);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--secondary);
+      display: block;
+    }
+
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-features { grid-template-columns: 1fr; }
+    }
+
+    /* CTA SECTION */
+    #cta {
+      background: linear-gradient(135deg, var(--cta), #c93d27);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    #cta h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    #cta p { color: rgba(255,255,255,0.9); font-size: 1rem; margin-bottom: 28px; }
+
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-white {
+      background: #fff;
+      color: var(--cta);
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+    .btn-white-outline {
+      background: transparent;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.7);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-white-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* CONTACT */
+    #contact { background: var(--background); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .contact-item-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-icon svg { width: 18px; height: 18px; fill: #fff; }
+
+    .contact-item-text strong { display: block; font-size: 0.82rem; color: #888; font-weight: 500; margin-bottom: 2px; }
+    .contact-item-text a, .contact-item-text span { font-size: 0.92rem; color: var(--text); text-decoration: none; }
+    .contact-item-text a:hover { color: var(--primary); }
+
+    .hours-table { width: 100%; margin-top: 20px; }
+
+    .hours-table tr td {
+      padding: 5px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hours-table tr td:first-child { font-weight: 600; color: var(--primary); width: 110px; }
+    .hours-table tr td:last-child { color: #555; }
+    .hours-closed { color: #E94F37 !important; font-style: italic; }
+
+    .contact-form-box { background: #fff; border-radius: var(--radius); padding: 30px; border: 1px solid #e2e8ed; }
+
+    .contact-form-box h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d0d7de;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--background);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26,109,143,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .btn-submit {
+      background: var(--cta);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-submit:hover { background: #c93d27; transform: translateY(-1px); }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1f2d;
+      color: rgba(255,255,255,0.75);
+      padding: 32px 20px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p { font-size: 0.82rem; line-height: 1.6; }
+
+    .footer-col h5 {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col p, .footer-col a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer-col a:hover { color: var(--secondary); }
+
+    .footer-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+      margin-top: 10px;
+    }
+
+    .footer-rating .stars { font-size: 0.95rem; }
+    .footer-rating .rating-num { font-size: 0.9rem; color: #fff; }
+    .footer-rating .rating-count { font-size: 0.75rem; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-bottom p { font-size: 0.78rem; }
+
+    .footer-maps-link {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .footer-maps-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero">Plombier & Électricien Vannes<br>Joseph HERBER</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#zone-intervention">Zone</a></li>
+        <li><a href="#avis-clients">Avis</a></li>
+        <li><a href="#presentation">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-inner">
+      <div class="hero-text fade-in">
+        <h1>Votre Plombier de <span>Confiance</span> à Vannes</h1>
+        <p>Réparations rapides et installations fiables dans le Golfe du Morbihan.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-cta">Demander un devis</a>
+          <a href="#services" class="btn-secondary">En savoir plus</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="hero-icon-box">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            <path d="M28 52 L28 36 Q28 28 36 28 L44 28 Q52 28 52 36 L52 44" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <circle cx="52" cy="50" r="6" stroke="rgba(245,166,35,0.9)" stroke-width="3" fill="none"/>
+            <path d="M22 52 L34 52" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M40 16 L40 22 M16 40 L22 40 M56 28 L60 24" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M54 54 L62 62" stroke="rgba(245,166,35,0.9)" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <p>Services de plomberie<br>professionnels à Vannes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">Nos Services</h2>
+      <div class="section-divider"></div>
+      <div class="services-grid">
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+            </svg>
+          </div>
+          <h3>Dépannage d'urgence</h3>
+          <p>Interventions rapides pour vos urgences de plomberie.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+            </svg>
+          </div>
+          <h3>Réparation de fuites</h3>
+          <p>Solutions efficaces pour toutes vos fuites d'eau.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2c-.67 0-1.18.07-1.63.14C14.72 12.91 15.8 10.6 17 8z"/>
+            </svg>
+          </div>
+          <h3>Entretien de chaudières</h3>
+          <p>Assurez la longévité de votre chaudière avec notre entretien professionnel.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 6.5C21 4.01 16.97 2 12 2S3 4.01 3 6.5c0 2.12 2.72 3.9 6.6 4.37-.06.43-.1.87-.1 1.34C9.5 16.37 10.71 20 12 20s2.5-3.63 2.5-7.79c0-.47-.04-.91-.1-1.34C18.28 10.4 21 8.62 21 6.5z"/>
+            </svg>
+          </div>
+          <h3>Rénovation de salle de bain</h3>
+          <p>Transformez votre salle de bain avec nos services de rénovation.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE D'INTERVENTION -->
+  <section id="zone-intervention">
+    <div class="container">
+      <h2 class="section-title fade-in">Notre Zone d'Intervention</h2>
+      <div class="section-divider"></div>
+      <div class="zone-content">
+        <div class="zone-text fade-in">
+          <p>Basés à Vannes, nous intervenons dans tout le Morbihan pour vous apporter des solutions rapides et efficaces. Notre équipe se déplace dans un rayon étendu pour garantir votre satisfaction.</p>
+          <p>Que vous soyez à Vannes, dans le Golfe du Morbihan ou dans les communes voisines, nous sommes à votre service du lundi au samedi de 7h à 20h.</p>
+          <div class="zone-tags">
+            <span class="zone-tag">Vannes</span>
+            <span class="zone-tag">Auray</span>
+            <span class="zone-tag">Lorient</span>
+            <span class="zone-tag">Pontivy</span>
+            <span class="zone-tag">Ploërmel</span>
+            <span class="zone-tag">Golfe du Morbihan</span>
+            <span class="zone-tag">Tout le Morbihan</span>
+          </div>
+        </div>
+        <div class="zone-map fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=place_id:ChIJcaPe0eQfEEgRnMb0Fi2mv3c"
+            allowfullscreen
+            loading="lazy"
+            title="Carte Vannes"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS CLIENTS -->
+  <section id="avis-clients">
+    <div class="container">
+      <h2 class="section-title fade-in">Avis Clients</h2>
+      <div class="section-divider"></div>
+      <div class="reviews-intro fade-in">
+        <div class="rating-badge">
+          <span class="stars">★★★☆☆</span>
+          <span class="rating-num">3 / 5</span>
+          <span class="rating-count">4 avis Google</span>
+        </div>
+      </div>
+      <div class="reviews-note fade-in">
+        <p>Retrouvez tous nos avis clients directement sur Google. Votre satisfaction est notre priorité !</p>
+      </div>
+      <div class="reviews-cta fade-in">
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJcaPe0eQfEEgRnMb0Fi2mv3c" target="_blank" rel="noopener" class="btn-outline">
+          Voir tous les avis sur Google →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTATION / ABOUT -->
+  <section id="presentation">
+    <div class="container">
+      <h2 class="section-title fade-in">À propos de nous</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>Chez Plombier & Électricien Vannes - Joseph HERBER, nous sommes spécialisés dans les services de réparation. Notre équipe d'artisans certifiés est dédiée à fournir des solutions rapides et efficaces pour tous vos besoins en plomberie.</p>
+          <p>Basés à Vannes, nous intervenons dans tout le Morbihan pour garantir votre satisfaction.</p>
+          <div class="about-features">
+            <span class="feature-item">Artisans certifiés</span>
+            <span class="feature-item">Réactivité garantie</span>
+            <span class="feature-item">Devis gratuit</span>
+            <span class="feature-item">Travail soigné</span>
+            <span class="feature-item">Zones Morbihan</span>
+            <span class="feature-item">Disponible 6j/7</span>
+          </div>
+        </div>
+        <div class="about-visual fade-in">
+          <h3>Pourquoi nous choisir ?</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-num">6j/7</span>
+              <span class="stat-label">Disponibilité</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">56</span>
+              <span class="stat-label">Morbihan couvert</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">24h</span>
+              <span class="stat-label">Délai d'intervention</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Engagement qualité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section id="cta">
+    <div class="container">
+      <h2>Besoin d'un plombier à Vannes ?</h2>
+      <p>Contactez-nous dès maintenant pour un devis gratuit et rapide.</p>
+      <div class="cta-btns">
+        <a href="tel:+33760287632" class="btn-white">📞 +33 7 60 28 76 32</a>
+        <a href="#contact" class="btn-white-outline">Remplir le formulaire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">Contactez-nous</h2>
+      <div class="section-divider"></div>
+      <p style="text-align:center; color:#666; font-size:0.9rem; margin-bottom:32px;" class="fade-in">Pour toute demande, veuillez nous appeler ou remplir notre formulaire de contact.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <h3>Nos Coordonnées</h3>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Téléphone</strong>
+              <a href="tel:+33760287632">+33 7 60 28 76 32</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Adresse</strong>
+              <span>81 Rue Mgr Yves Plumey, 56000 Vannes, France</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/>
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Horaires d'ouverture</strong>
+            </div>
+          </div>
+
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Lundi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Mardi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Mercredi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Jeudi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Vendredi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Samedi</td><td>7AM – 8PM</td></tr>
+              <tr><td>Dimanche</td><td class="hours-closed">Fermé</td></tr>
+            </tbody>
+          </table>
+
+          <br>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJcaPe0eQfEEgRnMb0Fi2mv3c" target="_blank" rel="noopener" class="btn-outline">
+            Voir sur Google Maps →
+          </a>
+        </div>
+
+        <div class="contact-form-box fade-in">
+          <h3>Envoyer un message</h3>
+          <form action="#" method="POST" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail *</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.fr" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" />
+            </div>
+            <div class="form-group">
+              <label for="service">Type de service</label>
+              <select id="service" name="service">
+                <option value="">Sélectionner un service</option>
+                <option>Dépannage d'urgence</option>
+                <option>Réparation de fuites</option>
+                <option>Entretien de chaudières</option>
+                <option>Rénovation de salle de bain</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer la demande</button>
+            <p id="form-success" style="display:none; color:green; text-align:center; margin-top:12px; font-size:0.88rem; font-weight:600;">✅ Votre message a été envoyé ! Nous vous contactons bientôt.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Plombier & Électricien Vannes - Joseph HERBER</h4>
+          <p>Votre artisan plombier de confiance à Vannes et dans tout le Morbihan. Disponible du lundi au samedi de 7h à 20h.</p>
+          <div class="footer-rating">
+            <span class="stars">★★★☆☆</span>
+            <span class="rating-num">3/5</span>
+            <span class="rating-count">4 avis Google</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#services">Dépannage d'urgence</a>
+          <a href="#services">Réparation de fuites</a>
+          <a href="#services">Entretien de chaudières</a>
+          <a href="#services">Rénovation salle de bain</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+33760287632">+33 7 60 28 76 32</a>
+          <p>81 Rue Mgr Yves Plumey<br>56000 Vannes, France</p>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJcaPe0eQfEEgRnMb0Fi2mv3c" target="_blank" rel="noopener" class="footer-maps-link">Voir sur Google Maps →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Plombier & Électricien Vannes - Joseph HERBER. Tous droits réservés.</p>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJcaPe0eQfEEgRnMb0Fi2mv3c" target="_blank" rel="noopener" class="footer-maps-link">📍 Voir sur Google Maps</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close nav on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Fade-in on scroll (IntersectionObserver)
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Trigger hero fade-in immediately
+    document.querySelectorAll('#hero .fade-in').forEach(el => {
+      setTimeout(() => el.classList.add('visible'), 200);
+    });
+
+    // Form submit handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const successMsg = document.getElementById('form-success');
+      successMsg.style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+    }
+
+    // Smooth active nav link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkItems = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinkItems.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + current) {
+          link.style.color = '#F5A623';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
